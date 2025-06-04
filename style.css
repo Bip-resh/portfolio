@@ -1,0 +1,332 @@
+/* Reset and base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Header */
+  header {
+    background: white;
+    padding: 20px 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    color: #0d6efd;
+  }
+  
+  .toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .toggle-btn:hover {
+    transform: rotate(20deg);
+  }
+
+  .side-nav {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 160px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .side-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .side-nav a {
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .side-nav a:hover {
+    color: #6610f2;
+  }
+  
+  body.dark .side-nav {
+    background: #1e1e1e;
+    box-shadow: -2px 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  body.dark .side-nav a {
+    color: #bbb;
+  }
+  
+  body.dark .side-nav a:hover {
+    color: #82aaff;
+  }
+  
+  
+  
+  #about {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    color: white;
+  }
+  
+  #about h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin: 20px 0 30px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  #about p {
+    max-width: 600px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+  }
+  
+  /* Main content sections */
+  main > section {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 60px 20px;
+  }
+  
+  /* Projects */
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 280px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .project-card h3 {
+    color: #0d6efd;
+    margin-bottom: 10px;
+  }
+  
+  /* Skills */
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .skill-card {
+    background: #0d6efd;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(13,110,253,0.3);
+    transition: background-color 0.3s ease;
+    cursor: default;
+  }
+  
+  .skill-card:hover {
+    background-color: #6610f2;
+  }
+  
+  /* Hobbies */
+  .hobbies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+    justify-items: center;
+  }
+  
+  .hobby-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: box-shadow 0.3s ease;
+    cursor: default;
+  }
+  
+  .hobby-card:hover {
+    box-shadow: 0 8px 30px rgba(13,110,253,0.3);
+  }
+  
+  .hobby-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+  }
+  
+  /* Contact */
+  .contact-container {
+    text-align: center;
+  }
+  
+  .email-badge {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 25px;
+    background: #0d6efd;
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(13,110,253,0.4);
+    transition: background-color 0.3s ease;
+  }
+  
+  .email-badge:hover {
+    background-color: #6610f2;
+  }
+  
+  
+  .phone-number {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 25px;
+    background: #0d6efd;
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(13,110,253,0.4);
+    transition: background-color 0.3s ease;
+  }
+  
+  .phone-number:hover {
+    background-color: #6610f2;
+  }
+  
+
+  footer {
+    background: white;
+    text-align: center;
+    padding: 20px 40px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  /* Dark mode styles */
+  body.dark {
+    background: #121212;
+    color: #eee;
+  }
+  
+  body.dark header {
+    background: #1e1e1e;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+  }
+  
+  body.dark nav a {
+    color: #bbb;
+  }
+  
+  body.dark nav a:hover {
+    color: #82aaff;
+  }
+  
+  body.dark #about {
+    background: linear-gradient(135deg, #6610f2, #0d6efd);
+    color: #ddd;
+  }
+  
+  body.dark .project-card {
+    background: #222;
+    box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+    color: #ccc;
+  }
+  
+  body.dark .project-card:hover {
+    box-shadow: 0 6px 25px rgba(130,170,255,0.4);
+  }
+  
+  body.dark .skill-card {
+    background: #4b00b5;
+    box-shadow: 0 4px 8px rgba(102,16,242,0.7);
+  }
+  
+  body.dark .skill-card:hover {
+    background-color: #0d6efd;
+  }
+  
+  body.dark .hobby-card {
+    background: #222;
+    box-shadow: 0 8px 30px rgba(130,170,255,0.3);
+    color: #ddd;
+  }
+  
+  body.dark .contact-container {
+    color: #ddd;
+  }
+  
+  body.dark .email-badge {
+    background: #4b00b5;
+    box-shadow: 0 4px 15px rgba(130,170,255,0.5);
+  }
+  
+  body.dark .email-badge:hover {
+    background-color: #0d6efd;
+  }
+  
+  body.dark footer {
+    background: #1e1e1e;
+    color: #bbb;
+    box-shadow: 0 -2px 8px rgba(255,255,255,0.1);
+  }
+  
